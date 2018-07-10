@@ -4,6 +4,11 @@ These data are licensed under opened, see the [FAQ here][2].
 How to use me
 -------------
 
+Dependencies:
+
+* python
+* python six module
+
 Run the `run.sh` script (no argument needed)
 
     ./run.sh
@@ -11,6 +16,7 @@ Run the `run.sh` script (no argument needed)
 Once the conversion is done, a file for each know fuel type will be available in the obf
 folder. To use them in OsmAnd, copy the files you need in the OsmAnd data folder on your
 mobile device:
+
   * `/sdcard/osmand` on older versions
   * `/sdcard/Android/data/net.osmand.plus/files` in more recent ones
 

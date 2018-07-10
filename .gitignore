@@ -2,3 +2,5 @@ obf
 osm
 OsmAndMapCreator-main*
 tmp
+__pycache__
+.pytest_cache
