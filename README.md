@@ -1,6 +1,13 @@
 Create OBF files for use with [OsmAnd][0] from [prix-carburant-economie.gouv.fr][1] data.
 These data are licensed under opened, see the [FAQ here][2].
 
+Install
+-------
+
+Download the monthly [generated OBF](http://bosdonnat.fr/osmand-fuel/Prix-carburant.obf) file
+in your osmand data **Android/data/net.osmand.plus/files**, restart OsmAnd and search the fuel
+you need!
+
 How to use me
 -------------
 
