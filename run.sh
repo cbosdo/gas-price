@@ -22,7 +22,7 @@
 
 grab_data ()
 {
-    wget -O $WORKDIR/data.zip http://donnees.roulez-eco.fr/opendata/jour
+    wget -O $WORKDIR/data.zip http://donnees.roulez-eco.fr/opendata/instantane
     unzip $WORKDIR/data.zip -d $WORKDIR
 }
 

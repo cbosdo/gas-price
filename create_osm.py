@@ -74,7 +74,7 @@ class PrixCarburantHandler(xml.sax.ContentHandler):
                          'timetable': {}}
         elif name == 'prix':
             update = attrs.get('maj')[:attrs.get('maj').find('T')]
-            self.shop['price'][attrs.get('nom')] = {'value': float(attrs.get('valeur')) / 1000.0,
+            self.shop['price'][attrs.get('nom')] = {'value': float(attrs.get('valeur')),
                                                     'update': update}
         elif name == 'jour':
             days_map = {'Lundi': 'Mo',
