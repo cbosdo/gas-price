@@ -64,8 +64,3 @@ The prices will be returned in a json format like:
   ]
 }
 ```
-
-# Things to do 
-* Use redis / couchdb as a possible data backend
-* Run on Kubernetes with deployment and cronjob
-* Implement fetcher for Germany
