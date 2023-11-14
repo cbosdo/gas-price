@@ -10,7 +10,7 @@ import (
 	"regexp"
 )
 
-var urlRegexp = regexp.MustCompile(`^/node|way/(\d+)$`)
+var urlRegexp = regexp.MustCompile(`^/(?:node|way)/([0-9]+)$`)
 
 type server struct {
 	DataDir string
@@ -35,7 +35,7 @@ func (s *server) getHandler(objectType string, resp http.ResponseWriter, request
 	matches := urlRegexp.FindAllStringSubmatch(request.URL.Path, -1)
 
 	// Get the object id
-	if matches != nil || len(matches) != 1 || len(matches[0]) != 2 {
+	if matches == nil || len(matches) != 1 || len(matches[0]) != 2 {
 		s.sendError(resp, http.StatusBadRequest, "Invalid query URL")
 		return
 	}
@@ -51,7 +51,7 @@ func (s *server) getHandler(objectType string, resp http.ResponseWriter, request
 
 	for _, folder := range folders {
 		if folder.IsDir() {
-			path := filepath.Join(s.DataDir, folder.Name(), objectId)
+			path := filepath.Join(s.DataDir, folder.Name(), objectType, objectId)
 			if _, err := os.Stat(path); err == nil {
 				// Read the file and send it back
 				data, err := os.ReadFile(path)

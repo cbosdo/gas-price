@@ -14,7 +14,7 @@ func getOsmGasStations(location string, dataFile string) error {
 	query := fmt.Sprintf("area[name='%s']; nwr(area)['amenity'=fuel]; out;", location)
 
 	if err := post("https://overpass-api.de/api/interpreter", url.Values{"data": {query}}, dataFile); err != nil {
-		return fmt.Errorf("Failed to retrieve gas stations using openstreetmap API: %s", err)
+		return fmt.Errorf("failed to retrieve gas stations using openstreetmap API: %s", err)
 	}
 
 	return nil
@@ -126,7 +126,6 @@ func reportUnmatched(matched map[string]string, pricesDir string) {
 
 	for _, file := range files {
 		if _, ok := matched[file.Name()]; !ok {
-			// TODO Fix the message
 			log.Printf("prix-carburants gas station not found on openstreetmap: %s\n", file.Name())
 		}
 	}
