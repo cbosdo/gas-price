@@ -2,15 +2,48 @@ name: Run-Daily
 
 on:
   schedule:
-    - cron: '30 15 * * *'
+    - cron: '45 15 * * *'
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2 
+      uses: actions/checkout@v4 
 
     - name: Generate the files
       run: |
-        python3 fr.py -o out
+        python3 fr.py -o out/fr
+        cp docs/README.md out/README.md
+        echo "##fr" >> out/README.md
+        echo "" >> out/README.md
+        for f in `ls -l out/fr`; do
+          echo "* [$f](fr/$f)" >> out/README.md
+        done
+        echo out/README.md
+
+
+    - name: Upload files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: out/
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    permissions:
+      page: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} 
+    
+    steps:
+    - name: Deploy to github pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      with:
+        artifact_name: prices
+
