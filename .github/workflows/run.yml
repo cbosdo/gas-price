@@ -39,7 +39,7 @@ jobs:
     needs: run
     runs-on: ubuntu-latest
     permissions:
-      page: write
+      pages: write
       id-token: write
 
     environment:
