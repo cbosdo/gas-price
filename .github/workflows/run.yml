@@ -20,8 +20,8 @@ jobs:
     - name: Generate the files
       run: |
         python3 fr.py -o out/fr
-        cp -r docs/ out/
-        echo "##fr" >> out/README.md
+        cp -r docs/* out/
+        echo "## fr" >> out/README.md
         echo "" >> out/README.md
         for f in `ls -1 out/fr`; do
           echo "* [$f](fr/$f)" >> out/README.md
