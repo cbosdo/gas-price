@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 Cédric Bosdonnat <cedric.bosdonnat@gmail.com>
+
+SPDX-License-Identifier: MIT
+-->
+
 Create KML files for use with [Organic Maps][0] from open gas prices data.
 
 For France, the data are coming from [prix-carburant-economie.gouv.fr][1].

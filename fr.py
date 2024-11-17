@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+# SPDX-FileCopyrightText: 2024 Cédric Bosdonnat <cedric.bosdonnat@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 # -*- coding: utf-8 -*-
 
 import click
