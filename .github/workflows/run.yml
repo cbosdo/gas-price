@@ -2,7 +2,7 @@ name: Run-Daily
 
 on:
   schedule:
-    - cron: '45 15 * * *'
+    - cron: '30 16 * * *'
   push:
     branches:
       - organic-maps
@@ -20,7 +20,7 @@ jobs:
     - name: Generate the files
       run: |
         python3 fr.py -o out/fr
-        cp docs/README.md out/README.md
+        cp -r docs/ out/
         echo "##fr" >> out/README.md
         echo "" >> out/README.md
         for f in `ls -1 out/fr`; do
