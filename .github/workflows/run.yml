@@ -3,6 +3,12 @@ name: Run-Daily
 on:
   schedule:
     - cron: '45 15 * * *'
+  push:
+    branches:
+      - organic-maps
+  pull_request:
+    branches:
+      - organic-maps
 
 jobs:
   run:
