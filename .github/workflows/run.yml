@@ -23,17 +23,21 @@ jobs:
         cp docs/README.md out/README.md
         echo "##fr" >> out/README.md
         echo "" >> out/README.md
-        for f in `ls -l out/fr`; do
+        for f in `ls -1 out/fr`; do
           echo "* [$f](fr/$f)" >> out/README.md
         done
         echo out/README.md
 
+    - name: Build site with Jekyll
+      uses: actions/jekyll-build-pages@v1
+      with:
+        source: out
 
     - name: Upload files as artifact
       id: deployment
       uses: actions/upload-pages-artifact@v3
       with:
-        path: out/
+        path: ./_site
 
   deploy:
     needs: run
