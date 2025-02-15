@@ -19,79 +19,79 @@ def parse_xml(xml_file, out_dir):
     writers = {
         "Precio_x0020_Gasoleo_x0020_A": writer.KmlWriter(
             os.path.join(out_dir, "diesel.kml"),
-            "Diesel",
+            "Spain - Diesel",
             "https://sedeaplicaciones.minetur.gob.es",
             "yellow"
         ),
         "Precio_x0020_Gasoleo_x0020_Premium": writer.KmlWriter(
             os.path.join(out_dir, "diesel-premium.kml"),
-            "Diesel Premium",
+            "Spain - Diesel Premium",
             "https://sedeaplicaciones.minetur.gob.es",
             "yellow"
         ),
         "Precio_x0020_Biodiesel": writer.KmlWriter(
             os.path.join(out_dir, "biodiesel.kml"),
-            "Biodiesel",
+            "Spain - Biodiesel",
             "https://sedeaplicaciones.minetur.gob.es",
             "yellow"
         ),
         "Precio_x0020_Bioetanol": writer.KmlWriter(
             os.path.join(out_dir, "e85.kml"),
-            "E85",
+            "Spain - E85",
             "https://sedeaplicaciones.minetur.gob.es",
             "cyan"
         ),
         "Precio_x0020_Gasolina_x0020_98_x0020_E10": writer.KmlWriter(
             os.path.join(out_dir, "e10.kml"),
-            "SP98E10",
+            "Spain - SP98E10",
             "https://sedeaplicaciones.minetur.gob.es",
             "lime"
         ),
         "Precio_x0020_Gasolina_x0020_98_x0020_E5": writer.KmlWriter(
             os.path.join(out_dir, "sp98.kml"),
-            "SP98",
+            "Spain - SP98",
             "https://sedeaplicaciones.minetur.gob.es",
             "green"
         ),
         "Precio_x0020_Gasolina_x0020_95_x0020_E10": writer.KmlWriter(
             os.path.join(out_dir, "sp95e10.kml"),
-            "SP95E10",
+            "Spain - SP95E10",
             "https://sedeaplicaciones.minetur.gob.es",
             "green"
         ),
         "Precio_x0020_Gasolina_x0020_95_x0020_E5": writer.KmlWriter(
             os.path.join(out_dir, "sp95.kml"),
-            "SP95",
+            "Spain - SP95",
             "https://sedeaplicaciones.minetur.gob.es",
             "green"
         ),
         "Precio_x0020_Gasolina_x0020_95_x0020_E5_x0020_Premium": writer.KmlWriter(
             os.path.join(out_dir, "sp95-premium.kml"),
-            "SP95 Premium",
+            "Spain - SP95 Premium",
             "https://sedeaplicaciones.minetur.gob.es",
             "green"
         ),
         "Precio_x0020_Gases_x0020_licuados_x0020_del_x0020_petróleo": writer.KmlWriter(
             os.path.join(out_dir, "gplc.kml"),
-            "GPLc",
+            "Spain - GPLc",
             "https://sedeaplicaciones.minetur.gob.es",
             "blue"
         ),
         "Precio_x0020_Gas_x0020_Natural_x0020_Licuado": writer.KmlWriter(
             os.path.join(out_dir, "lng.kml"),
-            "LNG",
+            "Spain - LNG",
             "https://sedeaplicaciones.minetur.gob.es",
             "blue"
         ),
         "Precio_x0020_Gas_x0020_Natural_x0020_Comprimido": writer.KmlWriter(
             os.path.join(out_dir, "cng.kml"),
-            "CNG",
+            "Spain - CNG",
             "https://sedeaplicaciones.minetur.gob.es",
             "blue"
         ),
         "Precio_x0020_Hidrogeno": writer.KmlWriter(
             os.path.join(out_dir, "h.kml"),
-            "Hydrogen",
+            "Spain - Hydrogen",
             "https://sedeaplicaciones.minetur.gob.es",
             "blue"
         ),

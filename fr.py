@@ -21,37 +21,37 @@ def parse_xml(xml_file, out_dir):
     writers = {
         "Gazole": writer.KmlWriter(
             os.path.join(out_dir, "diesel.kml"),
-            "Diesel",
+            "France - Diesel",
             "https://www.prix-carburants.gouv.fr",
             "yellow"
         ),
         "E85": writer.KmlWriter(
             os.path.join(out_dir, "e85.kml"),
-            "E85",
+            "France - E85",
             "https://www.prix-carburants.gouv.fr",
             "cyan"
         ),
         "E10": writer.KmlWriter(
             os.path.join(out_dir, "e10.kml"),
-            "E10",
+            "France - E10",
             "https://www.prix-carburants.gouv.fr",
             "lime"
         ),
         "SP98": writer.KmlWriter(
             os.path.join(out_dir, "sp98.kml"),
-            "SP98",
+            "France - SP98",
             "https://www.prix-carburants.gouv.fr",
             "green"
         ),
         "SP95": writer.KmlWriter(
             os.path.join(out_dir, "sp95.kml"),
-            "SP95",
+            "France - SP95",
             "https://www.prix-carburants.gouv.fr",
             "green"
         ),
         "GPLc": writer.KmlWriter(
             os.path.join(out_dir, "gplc.kml"),
-            "GPLc",
+            "France - GPLc",
             "https://www.prix-carburants.gouv.fr",
             "blue"
         ),
